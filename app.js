@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoosePaginate = require('mongoose-paginate-v2');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const isDev = process.env.NODE_ENV === "development";
 const mongoose = require('mongoose');
 const monoUrl = isDev ? 'mongodb://localhost/xxSite' : 'mongodb+srv://urutorahentai:1422015@xxsite.pc96p.mongodb.net/xxsite?retryWrites=true&w=majority';
