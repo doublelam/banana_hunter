@@ -1,0 +1,28 @@
+doctype html
+html(lang="zh")
+  head
+    title="Dash board"
+    link(rel='stylesheet', href='styles/common.css')
+    link(rel='stylesheet', href='styles/detail.css')
+  body
+    .content
+      .header
+        a.logo(href="/overview")
+          .left SE
+          .right XXOO
+      .body
+        .title= detail.title
+        .content= detail.content
+      .comments
+        .comments-list
+          ul#comments_wrapper.list
+        .input-area
+          input#post_input.input(placeholder="说点什么吧...")
+          button#post_btn.button 评论
+    script(type="text/javascript").
+      var articleId = '#{detail._id}'
+    script(type="text/javascript" src="js/detail.js")
+
+
+
+    

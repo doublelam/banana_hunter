@@ -1,0 +1,28 @@
+doctype html
+html(lang="zh")
+  head
+    title="Dash board"
+    link(rel='stylesheet', href='styles/common.css')
+    link(rel='stylesheet', href='styles/overview.css')
+  body
+    .content
+      .header
+        a.logo(href="/overview")
+          .left SE
+          .right XXOO
+      .body
+        .articles
+          ul.list
+            each val in articles.docs
+              li.item
+                a.a_link(href= "/detail?id=" + val._id)
+                  .a_title= val.title
+                  .a_content= val.content.slice(0, 20)
+        .footer
+          .pagination
+            a.previews(href= "/overview?page=" + articles.prevPage) 上一页
+            a.next(href= "/overview?page=" + articles.nextPage) 下一页
+
+
+
+    
