@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node app.js",
-    "start:w": "nodemon app.js --dev ",
+    "start:w": "NODE_ENV=development nodemon app.js --dev ",
     "mongo": "mongod --dbpath=/Users/$(whoami)/data/db"
   },
   "dependencies": {
