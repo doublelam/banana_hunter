@@ -9,22 +9,16 @@ html(lang="zh")
     .ui.form
       .field
         label Title
-        input(type="text" placeholder="title")
+        input#title_input(type="text" placeholder="title")
       .field
         label Content
-        textarea.ui(name="content")(placeholder="Content")
-      .ui.form.field
-        .grouped.fields
-          .field
-            .ui.checkbox
-              input(type="checkbox" name="test1")
-              label test1
-          .field
-            .ui.checkbox
-              input(type="checkbox" name="test2")
-              label test2
+        textarea#content_input.ui(name="content")(placeholder="Content")
+      .field
+        label Tag
+        input#tag_input(type="text")
+        
 
-    button.ui.button#post Post
-    script(src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js")
+    button.ui.button#post_btn Post
+    //- script(src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js")
     script(src="js/manage.js")
   
